@@ -1,0 +1,15 @@
+## Arg: source code
+
+## -- header file
+export PATH=/home/yeop/Delphes-3.4.2/classes:$PATH
+
+## -- lib file
+export LD_LIBRARY_PATH=/home/yeop/Delphes-3.4.2:$LD_LIBRARY_PATH
+
+## compile it
+# -I(location of header) -L(location of lib.so) 
+g++ `root-config --cflags` `root-config --libs` muontest.C -I/home/yeop/Delphes-3.4.2/classes -L/home/yeop/Delphes-3.4.2 -lDelphes -o muontest.exe
+
+
+
+
